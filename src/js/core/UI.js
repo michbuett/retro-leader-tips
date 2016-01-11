@@ -3,7 +3,7 @@ module.exports = (function () {
 
     var coquoVenenum = require('coquo-venenum');
     var each = require('pro-singulis');
-
+    var Utils = require('alchemy.js/lib/Utils');
     var Administrator = require('alchemy.js/lib/Administrator');
     var Apothecarius = require('alchemy.js/lib/Apothecarius');
     var Delegatus = require('alchemy.js/lib/Delegatus');
@@ -12,7 +12,7 @@ module.exports = (function () {
     var EventSystem = require('alchemy.js/lib/EventSystem');
     var CssRenderSystem = require('alchemy.js/lib/CssRenderSystem');
     var VDomRenderSystem = require('alchemy.js/lib/VDomRenderSystem');
-    var SheetRenderSystem = require('./ui/SheetRenderSystem');
+    var Viewport = require('./ui/Viewport');
 
     return coquoVenenum({
 
@@ -34,9 +34,6 @@ module.exports = (function () {
             return this.admin.update(state);
         },
 
-        /** @protected */
-        initEntities: function () {},
-
         //
         // private
         //
@@ -48,7 +45,6 @@ module.exports = (function () {
                 EventSystem,
                 CssRenderSystem,
                 VDomRenderSystem,
-                SheetRenderSystem,
 
             ], function (System) {
                 this.admin.addSystem(System.brew({
@@ -57,6 +53,14 @@ module.exports = (function () {
                     stylus: this.stylus,
                 }));
             }, this);
+        },
+
+        /** @private */
+        initEntities: function (state) {
+            this.admin.initEntities([Utils.melt(Viewport, {
+                id: 'viewport',
+                children: this.slides,
+            })], state);
         },
 
     }).whenBrewed(function () {

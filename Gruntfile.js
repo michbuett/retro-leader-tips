@@ -122,7 +122,7 @@ module.exports = function (grunt) {
         browserify: {
             web: {
                 src: [
-                    'src/js/web/init.js',
+                    'src/js/init.js',
                 ],
                 dest: 'tmp/js/app.js',
                 options: {

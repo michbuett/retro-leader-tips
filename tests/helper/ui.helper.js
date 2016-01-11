@@ -2,9 +2,9 @@
 (function () {
     'use strict';
 
-    window.uiHelper = function (Observari, State, UI) {
+    window.uiHelper = function (Observari, UI) {
         return {
-            setUp: function (testRun) {
+            setUp: function (testRun, state) {
                 testRun = testRun || this;
 
                 setFixtures([
@@ -13,7 +13,7 @@
 
                 testRun.messages = Observari.brew();
 
-                testRun.state = State.getInitialState();
+                testRun.state = state;
 
                 testRun.ui = UI.brew({
                     messages: testRun.messages,
