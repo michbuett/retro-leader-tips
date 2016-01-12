@@ -13,6 +13,8 @@ module.exports = (function () {
         return Utils.melt({
             globalToLocal: {
                 mode: 'mode',
+                windowWidth: 'windowWidth',
+                windowHeight: 'windowHeight',
                 currentIndex: 'currentIndex'
             },
 
@@ -39,6 +41,16 @@ module.exports = (function () {
             },
 
             css: {
+                entityRules: function (state) {
+                    var index = state.val('index');
+                    var cIndex = state.val('currentIndex');
+                    var width = state.val('windowWidth');
+
+                    return {
+                        left: (index - cIndex) * width + 'px',
+                    };
+                },
+
                 typeRules: {
                     '.slide': {
                         position: 'absolute',
@@ -48,6 +60,7 @@ module.exports = (function () {
                         height: '100%',
                         display: 'table',
                         'text-align': 'center',
+                        transition: 'left 0.2s step-end',
 
                         '.slide-title': {
                             position: 'absolute',
@@ -60,10 +73,9 @@ module.exports = (function () {
                         '.slide-inner': {
                             width: '100%',
                             display: 'table-cell',
-                            transition: 'opacity 0.2s ease-in-out',
                             'vertical-align': 'middle',
+                            transition: 'opacity 0.2s ease-in-out',
                         },
-
                     },
 
                     '.slide.hidden .slide-title': {

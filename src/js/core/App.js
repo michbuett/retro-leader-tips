@@ -21,7 +21,14 @@ module.exports = (function () {
 
         /** @override */
         update: function (p) {
-            this.ui.update(p.state);
+            var state = p.state
+                .set('windowWidth', document.body.offsetWidth)
+                .set('windowHeight', document.body.offsetHeight);
+
+            this.ui.update(state);
+
+            return state;
+
         },
 
     }).whenBrewed(function () {

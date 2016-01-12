@@ -8,6 +8,17 @@
     var messages, ui, app;
     var slides = each([
         require('./slides/Title'),
+        require('./slides/rank-10-1'),
+        require('./slides/rank-9-1'),
+        require('./slides/rank-8-1'),
+        require('./slides/rank-7-1'),
+        require('./slides/rank-6-1'),
+        require('./slides/rank-5-1'),
+        require('./slides/rank-4-1'),
+        require('./slides/rank-3-1'),
+        require('./slides/rank-2-1'),
+        require('./slides/rank-1-1'),
+        require('./slides/Sources'),
         require('./slides/Questions'),
     ], function (slide, index) {
         slide.state = slide.state || {};
