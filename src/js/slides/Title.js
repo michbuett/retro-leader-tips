@@ -6,11 +6,11 @@ module.exports = (function () {
 
     return slide([
         text('Die 10 wichtigsten Dinge die ein Moderator über Retrospektiven wissen sollte', {
-            'font-size': '65px',
+            'font-size': '90px',
         }),
 
         text('Michael Büttner | 13.01.2016', {
-            'font-size': '25px',
+            'font-size': '35px',
         }),
     ]);
 }());

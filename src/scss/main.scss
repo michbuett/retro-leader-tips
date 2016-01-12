@@ -6,12 +6,29 @@ html, body, #viewport {
     height: 100%;
 }
 
-body, .dlg {
+body {
     background: $color_bg_main;
     color: $color_fg_main;
     overflow: hidden;
-    font-family: Arial;
+    font-family: 'Bangers';
     font-size: 12px;
 
     @include unselectable;
+}
+
+
+.slide {
+    .text {
+        font-family: 'Bangers';
+
+        &.big {
+            font-size: 75px;
+        }
+    }
+
+    .slide-title {
+        font-family: 'Bangers';
+        font-size: 35px;
+        text-decoration: underline;
+    }
 }

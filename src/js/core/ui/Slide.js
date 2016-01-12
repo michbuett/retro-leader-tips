@@ -60,14 +60,11 @@ module.exports = (function () {
                         height: '100%',
                         display: 'table',
                         'text-align': 'center',
-                        transition: 'left 0.2s step-end',
 
                         '.slide-title': {
                             position: 'absolute',
                             top: '20px',
                             left: '20px',
-                            'font-style': 'italic',
-                            'font-size': '30px',
                         },
 
                         '.slide-inner': {
@@ -76,6 +73,14 @@ module.exports = (function () {
                             'vertical-align': 'middle',
                             transition: 'opacity 0.2s ease-in-out',
                         },
+                    },
+
+                    '.slide.active': {
+                        transition: 'left 0.2s step-start',
+                    },
+
+                    '.slide.hidden': {
+                        transition: 'left 0.2s linear',
                     },
 
                     '.slide.hidden .slide-title': {
