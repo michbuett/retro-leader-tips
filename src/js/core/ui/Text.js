@@ -1,25 +1,35 @@
 module.exports = (function () {
     'use strict';
 
-    return {
-        vdom: {
-            renderer: function (ctx) {
-                var s = ctx.state;
+    var Utils = require('alchemy.js/lib/Utils');
 
-                return ctx.h('div', {
-                    className: 'text ' + (s.val('className') || ''),
-                    id: ctx.entityId,
-                }, s.val('text'));
+    return function text(txt, entityCss, more) {
+        return Utils.melt({
+            state: {
+                text: txt
             },
-        },
 
-        css: {
-            typeRules: {
-                '.text': {
-                    padding: '0 40px',
-                    margin: '20px 0',
+            vdom: {
+                renderer: function (ctx) {
+                    var s = ctx.state;
+
+                    return ctx.h('div', {
+                        className: 'text ' + (s.val('className') || ''),
+                        id: ctx.entityId,
+                    }, s.val('text'));
                 },
             },
-        },
+
+            css: {
+                entityRules: entityCss,
+
+                typeRules: {
+                    '.text': {
+                        padding: '0 40px',
+                        margin: '20px 0',
+                    },
+                },
+            },
+        }, more);
     };
 }());
