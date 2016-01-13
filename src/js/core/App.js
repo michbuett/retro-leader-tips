@@ -22,8 +22,8 @@ module.exports = (function () {
         /** @override */
         update: function (p) {
             var state = p.state
-                .set('windowWidth', document.body.offsetWidth)
-                .set('windowHeight', document.body.offsetHeight);
+                .set('windowWidth', window.innerWidth)
+                .set('windowHeight', window.innerHeight);
 
             this.ui.update(state);
 

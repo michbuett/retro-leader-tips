@@ -42,6 +42,12 @@ module.exports = (function () {
 
             css: {
                 entityRules: function (state) {
+                    if (state.val('mode') === 'print') {
+                        return {
+                            left: 0,
+                        };
+                    }
+
                     var index = state.val('index');
                     var cIndex = state.val('currentIndex');
                     var width = state.val('windowWidth');
@@ -93,8 +99,8 @@ module.exports = (function () {
 
                     '.print .slide': {
                         position: 'relative',
-                        width: '420mm',
-                        height: '1052px',
+                        width: '420mm', // DIN A3 (ISO 216) landscape
+                        height: '297mm',
                     },
                 },
             },

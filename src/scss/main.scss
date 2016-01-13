@@ -1,15 +1,13 @@
 @import 'colors';
 @import 'mixins';
 
-html, body, #viewport {
+body {
     overflow: hidden;
-    height: 100%;
 }
 
-body {
+#viewport {
     background: $color_bg_main;
     color: $color_fg_main;
-    overflow: hidden;
     font-family: 'Bangers';
     font-size: 12px;
 

@@ -7,6 +7,8 @@ module.exports = (function () {
     return {
         /** @lends core.entities.Viewport.prototype */
         globalToLocal: {
+            windowWidth: 'windowWidth',
+            windowHeight: 'windowHeight',
             mode: 'mode',
             email: 'email',
         },
@@ -15,8 +17,9 @@ module.exports = (function () {
             root: document.getElementById('viewport'),
 
             renderer: function renderVdom(ctx) {
-                return ctx.h('button#viewport', {
-                    className: ctx.state.val('mode'),
+                return ctx.h('button', {
+                    id: ctx.entityId,
+                    className: 'viewport ' + ctx.state.val('mode'),
                     tabIndex: '1',
                     autofocus: '1',
                 }, [
@@ -26,25 +29,30 @@ module.exports = (function () {
         },
 
         css: {
-            typeRules: {
-                'html, body, #viewport': {
-                    width: '100%',
-                    height: '100%',
-                },
+            entityRules: function (state) {
+                if (state.val('mode') === 'print') {
+                    return {
+                        // width: '100%',
+                        height: 'initial',
+                    };
+                }
 
-                '#viewport': {
+                return {
+                    width: state.val('windowWidth') + 'px',
+                    height: state.val('windowHeight') + 'px',
+                };
+            },
+
+            typeRules: {
+                '.viewport': {
                     padding: 0,
-                    border: 0,
+                    border: 'none',
                     background: 'transparent',
                     color: 'inherit',
                 },
 
-                '#viewport:focus': {
+                '.viewport:focus': {
                     'box-shadow': 'inset 0 0 10px white',
-                },
-
-                '#viewport.print': {
-                    height: 'initial',
                 },
 
                 '#email': {
