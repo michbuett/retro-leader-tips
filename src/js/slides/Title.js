@@ -5,7 +5,7 @@ module.exports = (function () {
     var text = require('../core/ui/Text');
 
     return slide([
-        text('Die 10 wichtigsten Dinge, die ein Moderator in einer Retrospektive beachten sollte', {
+        text('Die 10 wichtigsten Dinge, die man beim Moderieren einer Retrospektive beachten sollte', {
             'font-size': '90px',
         }),
 
