@@ -117,6 +117,7 @@ module.exports = function (grunt) {
         // configure build
         clean: {
             web: [ 'tmp/*', 'build/web/*' ],
+            nw: [ 'tmp/*', 'build/nw/*' ],
         },
 
         browserify: {
@@ -165,20 +166,33 @@ module.exports = function (grunt) {
                     expand: true,
                 }]
             },
+
+            nw: {
+                files: [{
+                    src: ['src/html/web/index.html'],
+                    dest: 'tmp',
+                    expand: true,
+                    flatten: true,
+                }, {
+                    src: ['src/css/*'],
+                    dest: 'tmp/css',
+                    expand: true,
+                    flatten: true,
+                }]
+            },
+
         },
 
         nodewebkit: {
             options: {
-                appName: 'PixelBoiler',
-                platforms: ['win', 'linux32', 'linux64'],
-                buildDir: 'builds/nw',
+                appName: 'RetroTalk',
+                platforms: ['win', 'linux'],
+                buildDir: 'build/nw',
+                version: '0.12.3',
             },
             src: [
                 'package.json',
-                'src/nw-app.html',
-                'src/css/*.css',
-                'src/js/**/*.js',
-                'src/img/**/*',
+                'tmp/**/*',
             ]
         },
     });
@@ -201,4 +215,5 @@ module.exports = function (grunt) {
     grunt.registerTask('dev', ['connect', 'watch',]);
     grunt.registerTask('test', ['jsonlint', 'jshint', 'jasmine']);
     grunt.registerTask('test-web', ['clean:web', 'sass:dev', 'browserify:web', 'copy:web']);
+    grunt.registerTask('build-nw', ['clean:nw', 'sass:production', 'browserify:web', 'copy:nw', 'nodewebkit']);
 };

@@ -10,12 +10,12 @@
   "scripts": {
     "test": "./node_modules/.bin/grunt test"
   },
-  "main": "nw-app.html",
+  "main": "tmp/index.html",
   "window": {
     "min_width": 800,
     "min_height": 600,
     "position": "center",
-    "toolbar": true,
+    "toolbar": false,
     "frame": true
   },
   "devDependencies": {
