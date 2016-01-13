@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * display: flex | inline-flex; (Applies to: parent flex container element)
  *
@@ -7,10 +8,6 @@
  * - CSS columns have no effect on a flex container
  * - float, clear and vertical-align have no effect on a flex item
  */
-@mixin display-flex {
-    display: flex;
-}
-
 /**
  * flex-flow: <‘flex-direction’> || <‘flex-wrap’>
  *
@@ -18,15 +15,6 @@
  * together define the flex container's main and cross axes.
  * Default is "row nowrap";
  */
-@mixin flex-flow($direction: row, $wrap: nowrap) {
-    @if $direction != row {
-        @include flex-direction($direction);
-    }
-    @if $wrap != nowrap {
-        @include flex-wrap($wrap);
-    }
-}
-
 /**
  * flex-direction: row (default) | row-reverse | column | column-reverse
  *
@@ -38,10 +26,6 @@
  * - column: same as row but top to bottom
  * - column-reverse: same as row-reverse but top to bottom
  */
-@mixin flex-direction($dir) {
-    flex-direction: $dir;
-}
-
 /**
  * flex-wrap: nowrap (default) | wrap | wrap-reverse
  *
@@ -53,11 +37,6 @@
  * - wrap: multi-line / left to right in ltr; right to left in rtl
  * - wrap-reverse: multi-line / right to left in ltr; left to right in rtl
  */
-@mixin flex-wrap($wrap) {
-    flex-wrap: $wrap;
-}
-
-
 /**
  * align-items: flex-start | flex-end | center | baseline | stretch
  *
@@ -71,10 +50,6 @@
  * - baseline: items are aligned such as their baselines align
  * - stretch (default): stretch to fill the container (still respect min-width/max-width)
  */
-@mixin align-items($align: stretch) {
-    align-items: $align;
-}
-
 /**
  * justify-content: flex-start | flex-end | center | space-between | space-around
  *
@@ -89,10 +64,6 @@
  * - space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
  * - space-around: items are evenly distributed in the line with equal space around them
  */
-@mixin justify-content($align) {
-    justify-content: $align;
-}
-
 /**
  * flex (Applies to: child element / flex item)
  *
@@ -100,35 +71,38 @@
  * and third parameters (flex-shrink, flex-basis) are optional.
  * Default is "0 1 auto"
  */
-@mixin flex($flex: 1) {
-    flex: $flex;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/vagrant\/workspace\/retro-talk\/src\/scss\/main\.scss}line{font-family:\000034}}
+body {
+  overflow: hidden;
 }
 
-@mixin unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: moz-none;
-    -ms-user-select: none;
-    user-select: none;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/vagrant\/workspace\/retro-talk\/src\/scss\/main\.scss}line{font-family:\000038}}
+#viewport {
+  background: #353849;
+  color: #F0F1F2;
+  font-family: 'Bangers';
+  font-size: 12px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: moz-none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-@mixin transition($prop, $duration: 1s, $timing: ease, $delay: 0) {
-    -moz-transition: $prop $duration $timing $delay;
-    -webkit-transition: $prop $duration $timing $delay;
-    transition: $prop $duration $timing $delay;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/vagrant\/workspace\/retro-talk\/src\/scss\/main\.scss}line{font-family:\0000319}}
+.slide .text {
+  font-family: 'Bangers';
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/vagrant\/workspace\/retro-talk\/src\/scss\/main\.scss}line{font-family:\0000322}}
+.slide .text.big {
+  font-size: 75px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/vagrant\/workspace\/retro-talk\/src\/scss\/main\.scss}line{font-family:\0000327}}
+.slide .slide-title {
+  font-family: 'Bangers';
+  font-size: 35px;
+  text-decoration: underline;
 }
 
-@mixin component-border() {
-    outline: 1px solid $color_pixel_grid_normal;
-    @include box-shadow();
-}
-
-@mixin box-shadow() {
-    box-shadow: 0 0 10px #101213;
-}
-
-@mixin border-box-sizing() {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+/*# sourceMappingURL=main.css.map */
