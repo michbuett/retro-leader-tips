@@ -80,27 +80,11 @@ module.exports = function (grunt) {
         },
 
         // ////////////////////////////////////////////////////////////////////
-        // configure image minifier
-        imagemin: {
-            dist: {
-                options: {
-                    optimizationLevel: 3
-                },
-                files: [{
-                    expand: true,
-                    src: '**/*.png',
-                    cwd: 'src/images/',
-                    dest: 'tmp/images/'
-                }]
-            }
-        },
-
-        // ////////////////////////////////////////////////////////////////////
         // configure dev updates
         watch: {
             dev: {
                 files: ['Gruntfile.js', 'src/**/*', 'tests/**/*'],
-                tasks: ['test', 'test-web'],
+                tasks: ['test', 'build-web'],
             },
         },
 
@@ -130,14 +114,6 @@ module.exports = function (grunt) {
                     browserifyOptions: {
                         debug: true,
                     },
-                }
-            },
-        },
-
-        uglify: {
-            web: {
-                files: {
-                    'build/web/js/app.js': [ 'tmp/**/*.js' ]
                 }
             },
         },
@@ -183,7 +159,7 @@ module.exports = function (grunt) {
 
         },
 
-        nodewebkit: {
+        nwjs: {
             options: {
                 appName: 'RetroTalk',
                 platforms: ['win', 'linux'],
@@ -203,17 +179,15 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-jsonlint');
-    grunt.loadNpmTasks('grunt-node-webkit-builder');
+    grunt.loadNpmTasks('grunt-nw-builder');
 
     grunt.registerTask('dev', ['connect', 'watch',]);
     grunt.registerTask('test', ['jsonlint', 'jshint', 'jasmine']);
-    grunt.registerTask('test-web', ['clean:web', 'sass:dev', 'browserify:web', 'copy:web']);
-    grunt.registerTask('build-nw', ['clean:nw', 'sass:production', 'browserify:web', 'copy:nw', 'nodewebkit']);
+    grunt.registerTask('build-web', ['clean:web', 'sass:dev', 'browserify:web', 'copy:web']);
+    grunt.registerTask('build-nw', ['clean:nw', 'sass:production', 'browserify:web', 'copy:nw', 'nwjs']);
 };
