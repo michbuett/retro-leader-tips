@@ -5,7 +5,7 @@ module.exports = (function () {
     var text = require('../core/ui/BigText');
 
     return slide('Platz #1', [
-        text('Don\'t Panik', {
+        text('Don\'t Panic', {
             'font-size': '90px'
         })
     ]);
