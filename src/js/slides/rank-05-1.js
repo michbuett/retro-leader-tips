@@ -5,7 +5,7 @@ module.exports = (function () {
     var text = require('../core/ui/BigText');
 
     return slide('', [
-        text('#10'),
-        text('Don\'t change the basic structure'),
+        text('#5'),
+        text('Praise with caution'),
     ]);
 }());

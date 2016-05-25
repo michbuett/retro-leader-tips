@@ -4,7 +4,8 @@ module.exports = (function () {
     var slide = require('../core/ui/Slide');
     var text = require('../core/ui/BigText');
 
-    return slide('Platz #5', [
-        text('Der Moderator ist kein Teilnehmer')
+    return slide('', [
+        text('#4'),
+        text('Improve yourself'),
     ]);
 }());

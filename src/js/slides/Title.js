@@ -2,15 +2,10 @@ module.exports = (function () {
     'use strict';
 
     var slide = require('../core/ui/Slide');
-    var text = require('../core/ui/Text');
+    var html = require('../core/ui/Html');
 
-    return slide([
-        text('Die 10 wichtigsten Dinge, die man beim Moderieren einer Retrospektive beachten sollte', {
-            'font-size': '90px',
-        }),
-
-        text('Michael Büttner - 13.01.2016', {
-            'font-size': '35px',
-        }),
+    return slide('', [
+        html(function (h) { return h('div.speaker', 'Michael Büttner | Flyeralarm'); }),
+        html(function (h) { return h('div.title', 'The 10 Most Important Tips for the Retrospective Facilitator'); }),
     ]);
 }());

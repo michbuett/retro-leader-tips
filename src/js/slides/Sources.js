@@ -4,9 +4,8 @@ module.exports = (function () {
     var slide = require('../core/ui/Slide');
     var text = require('../core/ui/BigText');
 
-    return slide('Quellen und Links', [
+    return slide('References and Links', [
         text('- E. Derby and D. Larsen. Agile Retrospectives, Pragmatic Bookshelf, USA, 2006'),
         text('- C. Baldauf. Retr-O-Mat, http://www.plans-for-retrospectives.com/'),
-        text('- M. G. Richard. Fixed Mindset vs. Growth Mindset, http://michaelgr.com/2007/04/15/fixed-mindset-vs-growth-mindset-which-one-are-you/'),
     ]);
 }());

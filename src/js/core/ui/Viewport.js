@@ -22,9 +22,7 @@ module.exports = (function () {
                     className: 'viewport ' + ctx.state.val('mode'),
                     tabIndex: '1',
                     autofocus: '1',
-                }, [
-                    ctx.h('span#email', ctx.state.val('email')),
-                ].concat(ctx.renderAllChildren()));
+                }, ctx.renderAllChildren());
             }
         },
 
@@ -32,7 +30,6 @@ module.exports = (function () {
             entityRules: function (state) {
                 if (state.val('mode') === 'print') {
                     return {
-                        // width: '100%',
                         height: 'initial',
                     };
                 }
@@ -54,12 +51,6 @@ module.exports = (function () {
                 '.viewport:focus': {
                     'box-shadow': 'inset 0 0 10px white',
                 },
-
-                '#email': {
-                    position: 'absolute',
-                    bottom: '20px',
-                    right: '20px',
-                }
             }
         },
 

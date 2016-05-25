@@ -6,16 +6,15 @@ body {
 }
 
 #viewport {
-    background: $color_bg_main;
-    color: $color_fg_main;
     font-family: 'Bangers';
-    font-size: 12px;
-
     @include unselectable;
 }
 
-
 .slide {
+    background: transparent url('../img/bg-slide.jpg') no-repeat;
+    background-size: 100% 100%;
+    color: $color_dark;
+
     .text {
         font-family: 'Bangers';
 
@@ -26,7 +25,40 @@ body {
 
     .slide-title {
         font-family: 'Bangers';
-        font-size: 35px;
-        text-decoration: underline;
+        font-size: 45px;
+    }
+
+    .email {
+        font-size: 30px;
+        color: $color_light;
+        text-shadow: black 0 1px;
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+    }
+
+    &[data-index="0"] {
+        background-image: url('../img/bg-title.jpg');
+        color: $color_light;
+        text-shadow: black 0 1px;
+        text-align: left;
+
+        .speaker {
+            font-size: 45px;
+            position: absolute;
+            left: 100px;
+            bottom: 220px;
+        }
+
+        .title {
+            font-size: 80px;
+            position: absolute;
+            left: 100px;
+            bottom: 50px;
+        }
+
+        .email {
+            display: none;
+        }
     }
 }

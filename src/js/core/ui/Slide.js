@@ -13,6 +13,7 @@ module.exports = (function () {
         return Utils.melt({
             globalToLocal: {
                 mode: 'mode',
+                email: 'email',
                 windowWidth: 'windowWidth',
                 windowHeight: 'windowHeight',
                 currentIndex: 'currentIndex'
@@ -33,9 +34,13 @@ module.exports = (function () {
                         id: ctx.entityId,
                         key: ctx.entityId,
                         className: isActive ? 'active' : 'hidden',
+                        dataset: {
+                            index: s.index,
+                        },
                     }, [
                         h('div.slide-title', ctx.state.val('title')),
                         h('div.slide-inner', ctx.renderAllChildren()),
+                        h('span.email', ctx.state.val('email')),
                     ]);
                 },
             },
