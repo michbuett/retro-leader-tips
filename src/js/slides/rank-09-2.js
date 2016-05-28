@@ -4,11 +4,11 @@ module.exports = (function () {
     var slide = require('../core/ui/Slide');
     var text = require('../core/ui/BigText');
 
-    return slide('#9: Try new methods', [
-        text('Mad Sad Glad, Starfish,'),
-        text('Story Oscars, Lean Coffey'),
-        text('Unlikely Superheros, Speedboat'),
-        text('Park Bench'),
-        text('... and many more')
+    return slide('#9: Sorge für Abwechslung!', [
+        text('Speedboat - Mad Sad Glad - Starfish'),
+        text('Story Oscars - Lean Coffee'),
+        text('Five Whys - Unlikely Superheroes'),
+        text('Timeline - Park Bench'),
+        text('...'),
     ]);
 }());

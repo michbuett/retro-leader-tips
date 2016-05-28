@@ -5,8 +5,6 @@ module.exports = (function () {
     var text = require('../core/ui/Text');
 
     return slide([
-        text('Questions', {
-            'font-size': '65px',
-        })
+        text('Fragen?')
     ]);
 }());

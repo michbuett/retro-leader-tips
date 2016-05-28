@@ -6,6 +6,6 @@ module.exports = (function () {
 
     return slide('', [
         text('#8'),
-        text('Take your time'),
+        text('Nimm Dir ausreichend Zeit!'),
     ]);
 }());

@@ -6,6 +6,6 @@ module.exports = (function () {
 
     return slide('', [
         text('#6'),
-        text('The facilitator is no participant'),
+        text('Der Moderator ist kein Teilnehmer!'),
     ]);
 }());

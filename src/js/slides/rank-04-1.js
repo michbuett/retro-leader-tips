@@ -6,6 +6,6 @@ module.exports = (function () {
 
     return slide('', [
         text('#4'),
-        text('Improve yourself'),
+        text('Arbeite an Deinen Fähigkeiten!'),
     ]);
 }());

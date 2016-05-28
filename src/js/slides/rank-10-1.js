@@ -6,6 +6,6 @@ module.exports = (function () {
 
     return slide('', [
         text('#10'),
-        text('Don\'t change the basic structure'),
+        text('Lasse die Struktur der Retrospektive unverändert!'),
     ]);
 }());

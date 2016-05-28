@@ -14,14 +14,8 @@ body {
     background: transparent url('../img/bg-slide.jpg') no-repeat;
     background-size: 100% 100%;
     color: $color_dark;
-
-    .text {
-        font-family: 'Bangers';
-
-        &.big {
-            font-size: 75px;
-        }
-    }
+    font-family: 'Bangers';
+    font-size: 65px;
 
     .slide-title {
         font-family: 'Bangers';
@@ -43,22 +37,36 @@ body {
         text-shadow: black 0 1px;
         text-align: left;
 
+        .title-block {
+            position: absolute;
+            left: 0;
+            bottom: 50px;
+            margin: 0 100px;
+        }
+
         .speaker {
             font-size: 45px;
-            position: absolute;
-            left: 100px;
-            bottom: 220px;
         }
 
         .title {
             font-size: 80px;
-            position: absolute;
-            left: 100px;
-            bottom: 50px;
         }
 
         .email {
             display: none;
         }
+    }
+
+    .block {
+        padding: 0 100px;
+        text-align: left;
+        display: inline-block;
+    }
+
+    ul {
+        padding: 0 75px;
+        list-style: disc outside none;
+        text-align: left;
+        display: inline-block;
     }
 }

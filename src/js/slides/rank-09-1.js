@@ -6,6 +6,6 @@ module.exports = (function () {
 
     return slide('', [
         text('#9'),
-        text('Try new methods'),
+        text('Sorge für Abwechslung!'),
     ]);
 }());

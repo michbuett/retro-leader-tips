@@ -5,7 +5,11 @@ module.exports = (function () {
     var html = require('../core/ui/Html');
 
     return slide('', [
-        html(function (h) { return h('div.speaker', 'Michael Büttner | Flyeralarm'); }),
-        html(function (h) { return h('div.title', 'The 10 Most Important Tips for the Retrospective Facilitator'); }),
+        html(function (h) {
+            return h('div.title-block', [
+                h('div.speaker', 'Michael Büttner | Flyeralarm'),
+                h('div.title', 'Die 10 wichtigsten Dinge, die man beim Moderieren einer Retrospektive beachten sollte'),
+            ]);
+        })
     ]);
 }());

@@ -6,6 +6,6 @@ module.exports = (function () {
 
     return slide('', [
         text('#3'),
-        text('Keep an open mind'),
+        text('Gehe offen in die Retrospektive!'),
     ]);
 }());

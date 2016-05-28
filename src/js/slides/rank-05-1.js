@@ -6,6 +6,6 @@ module.exports = (function () {
 
     return slide('', [
         text('#5'),
-        text('Praise with caution'),
+        text('Gehe behutsam mit Lob um!'),
     ]);
 }());
