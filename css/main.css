@@ -71,17 +71,18 @@
  * and third parameters (flex-shrink, flex-basis) are optional.
  * Default is "0 1 auto"
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/vagrant\/workspace\/retro-talk\/src\/scss\/main\.scss}line{font-family:\000034}}
+@font-face {
+  font-family: 'Bangers';
+  src: url("../font/Bangers.ttf");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/developer\/workspace\/retro-leader-tips\/src\/scss\/main\.scss}line{font-family:\000039}}
 body {
   overflow: hidden;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/vagrant\/workspace\/retro-talk\/src\/scss\/main\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/developer\/workspace\/retro-leader-tips\/src\/scss\/main\.scss}line{font-family:\0000313}}
 #viewport {
-  background: #353849;
-  color: #F0F1F2;
   font-family: 'Bangers';
-  font-size: 12px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -90,19 +91,66 @@ body {
   user-select: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/vagrant\/workspace\/retro-talk\/src\/scss\/main\.scss}line{font-family:\0000319}}
-.slide .text {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/developer\/workspace\/retro-leader-tips\/src\/scss\/main\.scss}line{font-family:\0000318}}
+.slide {
+  background: transparent url("../img/bg-slide.jpg") no-repeat;
+  background-size: 100% 100%;
+  color: #353849;
   font-family: 'Bangers';
+  font-size: 65px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/vagrant\/workspace\/retro-talk\/src\/scss\/main\.scss}line{font-family:\0000322}}
-.slide .text.big {
-  font-size: 75px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/vagrant\/workspace\/retro-talk\/src\/scss\/main\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/developer\/workspace\/retro-leader-tips\/src\/scss\/main\.scss}line{font-family:\0000325}}
 .slide .slide-title {
   font-family: 'Bangers';
-  font-size: 35px;
-  text-decoration: underline;
+  font-size: 45px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/developer\/workspace\/retro-leader-tips\/src\/scss\/main\.scss}line{font-family:\0000330}}
+.slide .email {
+  font-size: 30px;
+  color: #F0F1F2;
+  text-shadow: black 0 1px;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/developer\/workspace\/retro-leader-tips\/src\/scss\/main\.scss}line{font-family:\0000339}}
+.slide[data-index="0"] {
+  background-image: url("../img/bg-title.jpg");
+  color: #F0F1F2;
+  text-shadow: black 0 1px;
+  text-align: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/developer\/workspace\/retro-leader-tips\/src\/scss\/main\.scss}line{font-family:\0000345}}
+.slide[data-index="0"] .title-block {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  margin: 0 100px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/developer\/workspace\/retro-leader-tips\/src\/scss\/main\.scss}line{font-family:\0000352}}
+.slide[data-index="0"] .speaker {
+  font-size: 45px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/developer\/workspace\/retro-leader-tips\/src\/scss\/main\.scss}line{font-family:\0000356}}
+.slide[data-index="0"] .title {
+  font-size: 80px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/developer\/workspace\/retro-leader-tips\/src\/scss\/main\.scss}line{font-family:\0000360}}
+.slide[data-index="0"] .email {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/developer\/workspace\/retro-leader-tips\/src\/scss\/main\.scss}line{font-family:\0000365}}
+.slide .block {
+  padding: 0 100px;
+  text-align: left;
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/developer\/workspace\/retro-leader-tips\/src\/scss\/main\.scss}line{font-family:\0000371}}
+.slide ul {
+  padding: 0 75px;
+  list-style: disc outside none;
+  text-align: left;
+  display: inline-block;
 }
 
 /*# sourceMappingURL=main.css.map */
