@@ -1,6 +1,11 @@
 @import 'colors';
 @import 'mixins';
 
+@font-face {
+    font-family: 'Bangers';
+    src: url('../font/Bangers.ttf');
+}
+
 body {
     overflow: hidden;
 }

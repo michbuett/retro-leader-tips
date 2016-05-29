@@ -136,6 +136,11 @@ module.exports = function (grunt) {
                     expand: true,
                     flatten: true,
                 }, {
+                    src: ['src/font/*'],
+                    dest: 'build/web/font',
+                    expand: true,
+                    flatten: true,
+                }, {
                     src: ['**'],
                     dest: 'build/web/',
                     cwd: 'tmp/',
