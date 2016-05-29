@@ -7,5 +7,6 @@ module.exports = (function () {
     return slide('Quellen und Links', [
         text('- E. Derby and D. Larsen. Agile Retrospectives, Pragmatic Bookshelf, USA, 2006'),
         text('- C. Baldauf. Retr-O-Mat, http://www.plans-for-retrospectives.com/'),
+        text('- http://michbuett.github.io/retro-leader-tips/'),
     ]);
 }());
