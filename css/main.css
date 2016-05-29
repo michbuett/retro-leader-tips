@@ -153,4 +153,28 @@ body {
   display: inline-block;
 }
 
+@media (max-width: 1560px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/developer\/workspace\/retro-leader-tips\/src\/scss\/main\.scss}line{font-family:\0000380}}
+  .slide[data-index="0"] .title {
+    font-size: 70px;
+  }
+}
+@media (max-width: 1400px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/developer\/workspace\/retro-leader-tips\/src\/scss\/main\.scss}line{font-family:\0000386}}
+  .slide[data-index="0"] .title {
+    font-size: 60px;
+  }
+}
+@media (max-width: 1220px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/developer\/workspace\/retro-leader-tips\/src\/scss\/main\.scss}line{font-family:\0000392}}
+  .slide {
+    font-size: 50px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/developer\/workspace\/retro-leader-tips\/src\/scss\/main\.scss}line{font-family:\0000396}}
+  .slide[data-index="0"] .title {
+    font-size: 50px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
